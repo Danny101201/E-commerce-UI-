@@ -47,16 +47,17 @@ const Info = styled.div`
 `
 const Product = styled.div`
   display:flex;
+  ${mobile({ flexDirection: 'column' })}
 `
 const ProductDetail = styled.div`
   flex:2;
   display:flex;
   align-items: center;
   justify-content: start;
+  ${mobile({ flexDirection: 'column' })}
 `
 const Image = styled.img`
   width:200px;
-  ${mobile({ width: '150px' })}
 `
 const Detail = styled.div`
   display:flex;
@@ -68,6 +69,11 @@ const ProductName = styled.span`
  white-space: nowrap;
 `
 const ProductId = styled.span``
+const ProductColors = styled.div`
+  display:flex;
+  gap:10px;
+  ${mobile({ justifyContent: 'center' })}
+`
 const ProductColor = styled.div`
   width: 20px;
   height: 20px;
@@ -81,12 +87,16 @@ const PriceDetail = styled.div`
   align-items: center;
   justify-content:center;
   flex-direction:column;
+  ${mobile({ flexDirection: 'row', margin: '10px 0 ' })}
+
 `
 const ProductAmountContainer = styled.div`
   display:flex;
   align-items:center;
   gap:20px;
   margin-bottom: 20px;
+  ${mobile({ margin: '0 20px 0 0' })}
+
 `
 const ProductAmount = styled.div`
   font-size:24px;
@@ -156,7 +166,11 @@ function Cart() {
                     <ProductId>
                       <b>ID:</b> 93813718293
                     </ProductId>
-                    <ProductColor color="black" />
+                    <ProductColors>
+                      <ProductColor color="black" />
+                      <ProductColor color="#1A4D2E" />
+                      <ProductColor color="#FF9F29" />
+                    </ProductColors>
                     <ProductSize>
                       <b>Size:</b> 37.5
                     </ProductSize>
@@ -182,7 +196,11 @@ function Cart() {
                     <ProductId>
                       <b>ID:</b> 93813718293
                     </ProductId>
-                    <ProductColor color="gray" />
+                    <ProductColors>
+                      <ProductColor color="gray" />
+                      <ProductColor color="#FFC4C4" />
+                      <ProductColor color="#A10035" />
+                    </ProductColors>
                     <ProductSize>
                       <b>Size:</b> M
                     </ProductSize>
