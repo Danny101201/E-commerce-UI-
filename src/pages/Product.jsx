@@ -54,6 +54,7 @@ const Filter = styled.div`
 const FilterText = styled.h1`
   font-weight:200;
   line-height:0;
+  ${mobile({fontSize:'24px'})}
 `
 const FilterColor = styled.div`
   width: 25px;
@@ -90,6 +91,7 @@ const Amount = styled.span`
 `
 const AddButton = styled.button`
   padding: 15px;
+  white-space:nowrap;
   border: 2px solid teal;
   background-color: white;
   cursor: pointer;
@@ -97,6 +99,7 @@ const AddButton = styled.button`
   &:hover{
     background-color: #f8f4f4;
   }
+  ${mobile({padding:'10px'})}
 `
 function Product() {
   return (

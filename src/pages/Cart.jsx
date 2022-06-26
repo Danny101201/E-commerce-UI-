@@ -15,7 +15,7 @@ const Title = styled.h1`
 `
 const Top = styled.div`
   display:flex;
-  ${mobile({flexDirection: 'column',gap:'20px'})}
+  ${mobile({ flexDirection: 'column', gap: '20px' })}
   align-items: center;
   justify-content:space-between;
   padding: 20px;
@@ -39,11 +39,11 @@ const TopText = styled.div`
 `
 const Bottom = styled.div`
   display:flex;
-  ${mobile({flexDirection: 'column'})}
+  ${mobile({ flexDirection: 'column' })}
 `
 const Info = styled.div`
   flex:3;
-  ${mobile({ flex:1 })}
+  ${mobile({ flex: 1 })}
 `
 const Product = styled.div`
   display:flex;
@@ -56,6 +56,7 @@ const ProductDetail = styled.div`
 `
 const Image = styled.img`
   width:200px;
+  ${mobile({ width: '150px' })}
 `
 const Detail = styled.div`
   display:flex;
@@ -63,7 +64,9 @@ const Detail = styled.div`
   gap:20px;
   margin-left: 20px;
 `
-const ProductName = styled.span``
+const ProductName = styled.span`
+ white-space: nowrap;
+`
 const ProductId = styled.span``
 const ProductColor = styled.div`
   width: 20px;
